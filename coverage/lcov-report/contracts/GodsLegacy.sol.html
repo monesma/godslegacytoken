@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/GodsLegacy.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> GodsLegacy.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">87.5% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>28/32</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">66.67% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>20/30</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">81.82% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>9/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">87.18% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>34/39</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.24;
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+&nbsp;
+contract GodsLegacy is ERC20, Ownable {
+    
+    address private contractOwner;
+    //allows you to validate or invalidate the burn tax (manipulate the function to sendTo)
+    bool public isTransferWithBurnEnabled = false;
+    // Variable for burn transfer tax (example 5 = 0.5%)
+    uint256 public burnRate = 0;
+    // Mapping to store the rarity of each token
+    mapping(uint256 =&gt; uint256) public tokenRarity;
+    // Event issued when an Ether amount is deposited in the contract
+    event EtherDeposited(address indexed depositor, uint256 amount);
+&nbsp;
+    constructor(
+        address _initialOwner
+    ) ERC20("Gods Legacy", "GLT") Ownable(_initialOwner) {
+        contractOwner = _initialOwner;
+        _mint(address(this), 100_000_000 * (10 ** 18));
+    }
+    
+    /**
+     * @notice Calculates the rarity of a token based on its ID.
+     * @param _tokenId The ID of the token to calculate rarity for.
+     * @return The rarity of the token, calculated based on the total number of tokens in circulation and its ID.
+     */
+<span class="fstat-no" title="function not covered" >    function calculateTokenRarity(</span>
+        uint256 _tokenId
+    ) internal view returns (uint256) {
+        // Exemple de calcul de rareté basé sur le nombre total de tokens en circulation
+<span class="cstat-no" title="statement not covered" >        uint256 totalSupply = totalSupply();</span>
+<span class="cstat-no" title="statement not covered" >        uint256 rarity = totalSupply / _tokenId;</span> // Plus le tokenId est bas, plus la rareté est grande
+<span class="cstat-no" title="statement not covered" >        return rarity;</span>
+    }
+&nbsp;
+    /**
+     * @notice Enables the transferWithBurn function, allowing token transfers with burning.
+     * Only callable by the owner of the contract.
+     **/
+    function enableTransferWithBurn() external onlyOwner {
+        isTransferWithBurnEnabled = true;
+    }
+&nbsp;
+    /**
+     * @notice Disables the transferWithBurn function, preventing token transfers with burning.
+     * Only callable by the owner of the contract.
+     **/
+    function disableTransferWithBurn() external onlyOwner {
+        isTransferWithBurnEnabled = false;
+    }
+&nbsp;
+    /**
+     * @notice Sets the token burn rate for transfer function.
+     *
+     * @param _burnRate The burn rate to set, expressed in thousandths (1/1000).
+     * @dev This function can only be called by the owner of the contract.
+     * @dev The burn rate must be less than or equal to 1000 (100%).
+     **/
+    function setBurnRate(uint256 _burnRate) external onlyOwner {
+        require(
+            _burnRate &lt;= 1000,
+            "Burn rate must be less than or equal to 1000"
+        );
+        burnRate = _burnRate;
+    }
+&nbsp;
+    /**
+    * @notice Sends tokens from the contract owner's address to `_to`.
+    * @param _to The recipient address to send tokens to.
+    * @param _amount The amount of tokens to send.
+    * @return A boolean indicating whether the transfer was successful.
+    */
+    function send(
+        address _to,
+        uint256 _amount
+    ) external onlyOwner returns (bool) {
+        _transfer(address(this), _to, _amount);
+        return true;
+    }
+    /**
+    * @notice Sends tokens from the sender's address to `_to`, with optional burning.
+    * @param _to The recipient address to send tokens to.
+    * @param _amount The amount of tokens to send.
+    * @return A boolean indicating whether the transfer was successful.
+    */
+    function transfer(
+        address _to,
+        uint256 _amount
+    ) public override returns (bool) {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_amount &gt; 0, "Amount must be greater than zero");
+&nbsp;
+        uint256 burnAmount = 0;
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (isTransferWithBurnEnabled &amp;&amp; burnRate &gt; 0) {
+            burnAmount = (_amount * burnRate) / 1000;
+        }
+&nbsp;
+        uint256 amountToTransfer = _amount - burnAmount;
+        uint256 senderBalance = balanceOf(msg.sender);
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(senderBalance &gt;= _amount, "Insufficient balance for transfer");
+&nbsp;
+        // Effectuez le transfert du montant après la brûlure
+        _transfer(msg.sender, _to, amountToTransfer);
+&nbsp;
+        // Brûlez le montant si nécessaire
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (burnAmount &gt; 0) {
+            _burn(msg.sender, burnAmount);
+        }
+&nbsp;
+        return true;
+    }
+   /**
+    * @notice Transfers tokens from `_from` to `_to` with additional functionalities like burning tokens.
+    * @param _from The address from which to transfer tokens.
+    * @param _to The address to which to transfer tokens.
+    * @param _amount The amount of tokens to transfer.
+    * @return A boolean indicating whether the transfer was successful.
+    */
+    function transferFrom(
+        address _from,
+        address _to,
+        uint256 _amount
+    ) public override returns (bool) {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_amount &gt; 0, "Amount must be greater than zero");
+&nbsp;
+        // Vérifier si l'appelant est autorisé à dépenser les tokens
+        uint256 currentAllowance = allowance(_from, msg.sender);
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(currentAllowance &gt;= _amount, "Allowance exceeded");
+&nbsp;
+        // Calculer le montant à brûler si nécessaire
+        uint256 burnAmount = 0;
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (isTransferWithBurnEnabled &amp;&amp; burnRate &gt; 0) {
+            burnAmount = (_amount * burnRate) / 1000;
+        }
+&nbsp;
+        // Calculer le montant réel à transférer
+        uint256 amountToTransfer = _amount - burnAmount;
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(balanceOf(_from) &gt;= _amount, "Insufficient balance for transfer");
+&nbsp;
+        // Effectuer le transfert
+        _transfer(_from, _to, amountToTransfer);
+&nbsp;
+        // Mettre à jour l'allocation
+        _approve(_from, msg.sender, currentAllowance - _amount);
+&nbsp;
+        // Brûler les tokens si nécessaire
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (burnAmount &gt; 0) {
+            _burn(_from, burnAmount);
+        }
+&nbsp;
+        return true;
+    }
+&nbsp;
+    /**
+     * @notice Mints new tokens and assigns them to the smart contract itself.
+     * @param _amount The amount of tokens to mint.
+     * @dev This function can only be called by the owner of the contract.
+    */
+    function mint(uint256 _amount) external <span class="missing-if-branch" title="else path not taken" >E</span>onlyOwner {
+        _mint(address(this), _amount);
+    }
+&nbsp;
+    /**
+    * @notice Retrieves the Ether balance of the contract.
+    * @return The current Ether balance held by this contract.
+    */
+<span class="fstat-no" title="function not covered" >    function getContractBalance() external view returns (uint256) {</span>
+<span class="cstat-no" title="statement not covered" >        return address(this).balance;</span>
+    }
+&nbsp;
+    /**
+     * @notice Function to verify if the guy is owner or not.
+     * @return The boolean true or false.
+     */
+    function isOwner() external view returns (bool) {
+        return msg.sender == owner();
+    }
+&nbsp;
+    // Fallback function to receive Ether
+    receive() external payable {
+        emit EtherDeposited(msg.sender, msg.value);
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Aug 26 2024 15:45:18 GMT+0200 (heure d’été d’Europe centrale)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
